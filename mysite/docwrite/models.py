@@ -35,7 +35,7 @@ class DocValue(models.Model):
 
     def get_text(self, doc_type):
         if doc_type == 'Car':
-            msg = f'On {self.dc_date} one {self.part_name} came by {self.doc_type} form {self.place} and for transport he had spent {self.amount}. He/she arrived as self.ar_no.'
+            msg = f'On {self.dc_date} one {self.part_name} came by {self.doc_type} form {self.place} and for transport he had spent {self.amount}. He/she arrived as {self.ar_no}.'
         elif doc_type == 'Bus':
             msg = f'On {self.dc_date} one {self.part_name} came by tamil nadu Govrment bus form {self.place} and for transport he had spent{self.amount}. His seat No. {self.seat_no}. He/she arrived as {self.ar_no}.'
         else:

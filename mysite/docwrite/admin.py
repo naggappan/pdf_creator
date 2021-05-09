@@ -8,7 +8,7 @@ from .models import Document, DocType, DocValue
 
 class DocValueAdmin(admin.ModelAdmin):
     list_display = ('doc_name', 'doc_type', 'place', 'ar_no')
-    list_filter = ('doc_name',)
+    list_filter = ('doc_name', 'doc_type')
 
 
 admin.site.register(Document)

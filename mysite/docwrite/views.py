@@ -6,7 +6,7 @@ from .models import Document, DocType, DocValue
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("You are in listing documents.")
 
 def detail(request, document_id):
     #import pdb;pdb.set_trace()
