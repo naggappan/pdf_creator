@@ -22,5 +22,15 @@ class SaleDeed(models.Model):
     To = models.CharField(max_length=200)
     BeforeSRO = models.CharField(max_length=200)
 
+class SettlementDeed(models.Model):
+    Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    LaterDate = models.DateField()
+    SaidName = models.CharField(max_length=200)
+    ExecutedBy = models.CharField(max_length=200)
+    Relation = models.CharField(max_length=100)
+    Property = models.CharField(max_length=200)
+    DocNo = models.CharField(max_length=200)
+    BeforeSRO = models.CharField(max_length=200)
+
     def __str__(self):
         return self.Customer.CustomerName
