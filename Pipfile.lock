@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e87e2063f2ce966d1d94238a6bc8bcf8650a173dd0fb0409815b5147d18dff18"
+            "sha256": "445f0af782db4038afef75e78f42f2d4d97e942e9d348c664e32b47bd62d2bdb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,16 @@
             ],
             "index": "pypi",
             "version": "==3.2.3"
+        },
+        "pdfkit": {
+            "hashes": [
+                "sha256:05f1c631e8d9ab877886955da825e48b459e097886a21448ab17b34c60cfd66c",
+                "sha256:6a866c9659e62a81abd72cdb32b400762d76085b964beb0b15106d573a539677",
+                "sha256:a315a665c266db28fb751891d0661fe5e750ced812cb4eadb3ce63afba9a7475",
+                "sha256:ef1da35b78d534197e7ce4a604a4a190e9aa769e56634957535f3479a50d8cd1"
+            ],
+            "index": "pypi",
+            "version": "==0.6.1"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -72,6 +82,14 @@
             ],
             "index": "pypi",
             "version": "==2.8.6"
+        },
+        "python-pdf": {
+            "hashes": [
+                "sha256:8c61b777541f1076e9de8f28473f8954269815c3b8dd6858a7c8b3ce526162da",
+                "sha256:a6055955c93c0a7b6b9777df3dbe78532c6ec6fb972fe1c08fb4f003def173ad"
+            ],
+            "index": "pypi",
+            "version": "==0.38"
         },
         "pytz": {
             "hashes": [
