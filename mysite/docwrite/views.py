@@ -1,8 +1,6 @@
 import re
 import pdfkit
-from django.shortcuts import render
 from django.http import HttpResponse
-from reportlab.pdfgen import canvas 
 from .models import Customer, SaleDeed
 from .models import SettlementDeed
 # Create your views here.
@@ -27,34 +25,11 @@ def get_salesdeed_message(customer_name):
 def detail(request, customer_name):
     # Pick all saledeed for selected customer and return
     msg = get_salesdeed_message(customer_name)
-    # response = HttpResponse(content_type='application/pdf')  
-    # response['Content-Disposition'] = 'attachment; filename="file.pdf"' 
-    # p = canvas.Canvas(response)  
-    # p.setFont("Times-Roman", 12) 
-    # p.drawString(100,100,msg)  
-    # p.showPage()  
-    # p.save() 
-    return HttpResponse(msg)   
-     
-    # return response()
+    return HttpResponse(msg)
     
 def getpdf(request,customer_name):
-    # print(request.get_host())
-    # projectUrl = request.get_host() + '/docwrite/customer/dock/'
     msg = get_salesdeed_message(customer_name)
-    # pdf = pdfkit.from_url(projectUrl, False)
-    # import pdb;pdb.set_trace()
     pdf = pdfkit.from_string(msg, False)
     response = HttpResponse(pdf,content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="doc.pdf"'
     return response
-# def getpdf(request):  
-#     m="hey"
-#     response = HttpResponse(content_type='application/pdf')  
-#     response['Content-Disposition'] = 'attachment; filename="file.pdf"' 
-#     p = canvas.Canvas(response)  
-#     p.setFont("Times-Roman", 55) 
-#     p.drawString(100,700,m)  
-#     p.showPage()  
-#     p.save()  
-#     return response  
