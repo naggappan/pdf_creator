@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 psycopg2-binary = "*"
+python-pdf = "*"
+pdfkit = "*"
 
 [requires]
 python_version = "3.7"
